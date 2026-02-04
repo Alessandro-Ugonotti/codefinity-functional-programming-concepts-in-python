@@ -9,7 +9,7 @@ books = [
 # Step 2: Create a custom function
 def has_many_pages(books, min_pages=350):
     """Check if the book has more than min_pages."""
-    return books["pages"] > 350
+    return books["pages"] > min_pages
 
 # Step 3: Use filter() with the custom function
 filtered_books = filter(lambda book: has_many_pages(book), books)
