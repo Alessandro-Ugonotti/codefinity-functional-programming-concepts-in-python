@@ -4,17 +4,17 @@ import time
 def time_it(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()  # Start time
-        result = ___(*args, **kwargs)  # Call the function
+        result = func(*args, **kwargs)  # Call the function
         end_time = time.time()  # End time
         print(f"{func.__name__} took {end_time - start_time} seconds")
-        return ___
-    return ___
+        return result
+    return wrapper
 
 # Step 4: Apply the decorator
-@___
+@time_it
 def factorial(n):
     """Function to compute factorial of a number"""
     return 1 if n == 0 else n * factorial(n - 1)
 
 # Step 5: Test the decorator
-print(___(10))  # Replace with any number to test
+print(factorial(10))  # Replace with any number to test
