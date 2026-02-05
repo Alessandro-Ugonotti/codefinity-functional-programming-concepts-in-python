@@ -1,6 +1,6 @@
 def threshold_checker(threshold):
     def check(value):
-        if value < threshold:
+        if value <= threshold:
             return False
         else:
             return True
